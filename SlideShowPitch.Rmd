@@ -1,0 +1,80 @@
+---
+title: "CourseProjectPitch"
+author: "Cody Hollohan"
+date: "April 19, 2017"
+output: "ioslides_presentation"
+logo: "C:/Users/hollcod/Desktop/garth.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+```{r load packages}
+require(grid)
+require(png)
+require(knitr)
+require(ggplot2)
+require(plotly)
+require(datasets)
+require(dplyr)
+require(reshape2)
+require(RColorBrewer)
+```
+
+## PARTY ON WAYNE!! PARTY ON GARTH!!!
+
+Tired of having to MANUALLY plot your univariate linear models, one at a time?
+
+WHAT A WASTE!! We here at *Most-Rightuous Data Analytics* know that your time is better spent jamming with the jabronies, or laying back with the ladies. 
+
+Our latest and greatest app puts you back in the action pronto!! No more will you be plotting your most-excellent univariate linear models one by one. Get back to the jam session with the **Party On** app!!
+
+**PARTY ON!**
+
+***
+<h3>Most-Excellent Supporting Info</h3>
+      
+The data fed into the operations of this gnarley application are from the Motor Trend Car Road Tests dataset, put together in the 1974 Motor Trend US magazine, describing measurable data from several vehicles of that rockin mid-70's era.
+```{r pic1, out.width="700px"}
+#img <- readPNG("C:/Users/hollcod/Desktop/WaynesWorld2.png")
+#grid.raster(img)
+include_graphics("C:/Users/hollcod/Desktop/WaynesWorld2.png")
+```
+
+***
+<h3>Bodatious Calculations</h3>
+
+```{r data, echo = FALSE}
+carsdata <- mtcars
+carsdata <- carsdata[,c("mpg", "wt", "qsec")]
+carsdata$wt <- carsdata$wt*1000
+```
+
+        A. Linear model coefficients
+```{r coef}
+coef(summary(lm(mpg ~ wt, data = carsdata)))
+```
+        
+        B. Length of the predictor vector
+```{r length}        
+dim(carsdata)[1]        
+```        
+
+        C. Mean predictor value
+```{r mean}
+mean(carsdata$wt)
+```
+</div>
+
+## Get a Load Of This Face-Shredding Interface!!!
+
+```{r interface, out.width = "800px"}
+
+include_graphics("C:/Users/hollcod/Desktop/Interfacial.png")
+
+```
+
+
+
+
